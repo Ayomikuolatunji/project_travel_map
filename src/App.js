@@ -9,6 +9,7 @@ export default function App() {
   const [places,setPlaces]=React.useState([])
   const [coordinate,setCoordinate]=React.useState({})
   const [bounds,setBounds]=React.useState("");
+  const [childClicked,setChildClicked]=React.useState(null)
   React.useEffect(()=>{
     navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
       setCoordinate({lat:latitude, lng:longitude})
@@ -37,6 +38,7 @@ export default function App() {
                   setBounds={setBounds}
                   coordinate={coordinate}
                   places={places} 
+                  setChildClicked={setChildClicked}
                  />
              </Grid>
         </Grid>
