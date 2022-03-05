@@ -1,74 +1,131 @@
-# Getting Started with Create React App
+### Hi there, I'm Sabesan Sathananthan - aka [Sabesan][website] 👋
 
-project url :
+## I'm a Student, Undergraduate, Developer, and Physics Teacher!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 🔭 I’m currently working on a my final year project!
+- 🌱 I’m currently learning Fullstack and Machine Learning
+- 👯 I’m looking to collaborate with other content creators
+- 🥅 2020 Goals: Contribute more to Open Source projects
+- ⚡ Fun fact: I love to play chess and listen music.
 
-## Available Scripts
+### Connect with me:
 
-In the project directory, you can run:
+[<img align="left" alt="Sabesan" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="Sabesan | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.4.0/icons/facebook.svg" />][facebook]
+[<img align="left" alt="Sabesan | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="Sabesan | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="Sabesan | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Languages and Tools:
 
-### `npm test`
+[<code>
+<img alt="visual studio code" width="26px" src="https://img.icons8.com/fluent/240/000000/visual-studio-code-2019.png" />
+</code>](https://code.visualstudio.com/)
+[<code>
+<img alt="intellij idea" width="26px" src="https://img.icons8.com/color/240/000000/intellij-idea.png" />
+</code>](https://www.jetbrains.com/idea/)
+[<code>
+<img alt="pycharm" width="26px" src="https://img.icons8.com/color/240/000000/pycharm.png" />
+</code>](https://www.jetbrains.com/pycharm/)
+[<code>
+<img alt="javascript" width="26px" src="https://img.icons8.com/color/240/000000/javascript.png" />
+</code>](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[<code>
+<img alt="react" width="26px" src="https://img.icons8.com/color/240/000000/react-native.png" />
+</code>](https://reactjs.org/)
+[<code>
+<img alt="java" width="26px" src="https://img.icons8.com/color/240/000000/java-coffee-cup-logo.png">
+</code>](https://docs.oracle.com/en/java/)
+[<code>
+<img alt="python" width="26px" src="https://img.icons8.com/color/240/000000/python.png">
+</code>](https://www.python.org/)
+[<code>
+<img alt="typescript" width="26px" src="https://img.icons8.com/color/240/000000/typescript.png">
+</code>](https://www.typescriptlang.org/)
+[<code>
+<img alt="html5" width="26px" src="https://img.icons8.com/color/240/000000/html-5.png">
+</code>](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[<code>
+<img alt="css3" width="26px" src="https://img.icons8.com/color/240/000000/css3.png">
+</code>](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[<code>
+<img alt="sass" width="26px" src="https://img.icons8.com/color/240/000000/sass.png">
+</code>](https://sass-lang.com/)
+[<code>
+<img alt="json" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/json/json.png">
+</code>](https://www.json.org/json-en.html)
+[<code>
+<img alt="eslint" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/eslint/eslint.png">
+</code>](https://eslint.org/)
+[<code>
+<img alt="Node.js" width="26px" src="https://img.icons8.com/color/240/000000/nodejs.png">
+</code>](https://nodejs.org/en/)
+[<code>
+<img alt="MySQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png">
+</code>](https://dev.mysql.com/)
+[<code>
+<img alt="latex" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png">
+</code>](https://www.latex-project.org/)
+[<code>
+<img alt="markdown" width="26px" src="https://img.icons8.com/ios-filled/100/000000/markdown.png">
+</code>](https://www.markdownguide.org/)
+[<code>
+<img alt="Git" width="26px" src="https://img.icons8.com/color/240/000000/git.png">
+</code>](https://git-scm.com/)
+[<code>
+<img alt="github" width="26px" src="https://img.icons8.com/ios-glyphs/240/000000/github.png">
+</code>](https://github.com/)
+[<code>
+<img alt="terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png">
+</code>](https://docs.microsoft.com/en-us/windows/terminal/)
+<br />
+[<code>
+<img alt="windows" width="26px" src="https://img.icons8.com/color/240/000000/windows-10.png">
+</code>](https://www.microsoft.com/en-us/windows)
+[<code>
+<img alt="ubuntu" width="26px" src="https://img.icons8.com/color/96/000000/ubuntu--v1.png">
+</code>](https://ubuntu.com/)
+[<code>
+<img alt="macos" width="26px" src="https://img.icons8.com/officel/160/000000/mac-logo.png">
+</code>](https://developer.apple.com/macos/)
+[<code>
+<img alt="linux" width="26px" src="https://img.icons8.com/color/96/000000/linux.png">
+</code>](https://www.kernel.org/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📝 Latest Blog Posts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These are my latest posts on [Medium](https://medium.com/@sabesan96) and [Dev.to](https://dev.to/thesabesan):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Medium
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- MEDIUM:START -->
+<!-- MEDIUM:END -->
 
-### `npm run eject`
+### Dev Community
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- DEVTO:START -->
+<!-- DEVTO:END -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_NOTE: Top languages does not indicate my skill level or something like that, it's a github metric of which languages i have the most code on github_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a href="https://github.com/sabesansathananthan">
+<img align="center" alt="sabesan's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=sabesansathananthan&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=radical" /></a>
+<a href="https://github.com/sabesansathananthan">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=sabesansathananthan&layout=compact&theme=radical" />
+</a>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
+[website]: https://sabesansathananthan.now.sh
+[twitter]: https://twitter.com/TheSabesan
+[facebook]: https://www.facebook.com/sathananthan.sabesan
+[instagram]: https://www.instagram.com/s_sabesan
+[linkedin]: https://www.linkedin.com/in/sabesan96
