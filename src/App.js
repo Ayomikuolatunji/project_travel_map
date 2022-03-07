@@ -9,18 +9,21 @@ export default function App() {
   const [places,setPlaces]=React.useState([])
   const [coordinate,setCoordinate]=React.useState({})
   const [bounds,setBounds]=React.useState("");
-  const [childClicked,setChildClicked]=React.useState(null)
+  const [childClicked,setChildClicked]=React.useState(null);
+  const [loading,setloading]=React.useState(true)
   React.useEffect(()=>{
     navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
       setCoordinate({lat:latitude, lng:longitude})
     })
   },[])
   React.useEffect(()=>{
+    setloading(true)
     if(bounds){
       fetch_place_data(bounds.sw,bounds.ne)
       .then(data=>{
         console.log(data)
         setPlaces(data)
+        setloading(false)
       })
     }
   },[bounds])
@@ -28,9 +31,14 @@ export default function App() {
   return (
         <CssBaseline>
         <Header/>
-        <Grid container spacing={3} style={{width:"100%"}}>
+        <Grid container 
+        spacing={3} 
+        style={{width:"100%"}}>
              <Grid item xs={12} md={4}>
-                 <List places={places} childClicked={childClicked}/>
+                 <List 
+                 places={places} 
+                 childClicked={childClicked}/>
+                 loading={loading}
              </Grid>
              <Grid item xs={12} md={8}>
                 <Map

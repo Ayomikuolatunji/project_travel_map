@@ -3,7 +3,7 @@ import useStyles from './listStyle';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({places,childClicked}){
+export default function List({places,childClicked,loading}){
     const classes=useStyles();
     const [type,setType]=React.useState("");
     const [rating,setRating]=React.useState("");
@@ -15,7 +15,14 @@ export default function List({places,childClicked}){
     return(
         <div className={classes.container}>
             <Typography variant="h6">Food & Dining around you</Typography>
-           <FormControl  className={classes.formControl}>
+            {loading
+            ?
+            <div className={classes.loading}>
+              <CircularProgress/>
+            </div>
+            :
+            <>
+            <FormControl  className={classes.formControl}>
             <InputLabel id="type">Type</InputLabel>
             <Select id="type" value={type} onChange={(e) => setType(e.target.value)}>
               <MenuItem value="restaurants">Restaurants</MenuItem>
@@ -34,11 +41,19 @@ export default function List({places,childClicked}){
           </FormControl>
           <Grid container spacing={3} className={classes.list} places={places}>
           {places?.map((place, i) => (
-              <Grid  item xs={12}>
-                <PlaceDetails place={place} />
+              <Grid  item xs={12} ref={ref[i]}>
+                <PlaceDetails 
+                 place={place} 
+                 selected={Number(childClicked)===i}
+                 refProp={ref[i]}
+                />
               </Grid>
             ))}
           </Grid>
+            
+            </>
+           }
+           
         </div>
     )
 }
