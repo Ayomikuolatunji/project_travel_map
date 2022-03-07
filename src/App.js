@@ -21,7 +21,6 @@ export default function App() {
     if(bounds){
       fetch_place_data(bounds.sw,bounds.ne)
       .then(data=>{
-        console.log(data)
         setPlaces(data)
         setloading(false)
       })

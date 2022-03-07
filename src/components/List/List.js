@@ -7,11 +7,16 @@ export default function List({places,childClicked,loading}){
     const classes=useStyles();
     const [type,setType]=React.useState("");
     const [rating,setRating]=React.useState("");
-    const [ref,setRef]=React.useState();   
-    React.useEffect(()=>{
-       const refs=Array.fill(places.length).map((_,i)=>ref[i] || createRef() )
-       setRef(refs)
-    },[places,ref])
+    const [elRefs, setElRefs] = React.useState([]);
+      
+     
+    
+  
+    React.useEffect(() => {
+      setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
+      console.log( setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef())))
+    }, [places]);
+ 
     return(
         <div className={classes.container}>
             <Typography variant="h6">Food & Dining around you</Typography>
@@ -41,13 +46,9 @@ export default function List({places,childClicked,loading}){
           </FormControl>
           <Grid container spacing={3} className={classes.list} places={places}>
           {places?.map((place, i) => (
-              <Grid  item xs={12} ref={ref[i]}>
-                <PlaceDetails 
-                 place={place} 
-                 selected={Number(childClicked)===i}
-                 refProp={ref[i]}
-                />
-              </Grid>
+             <Grid ref={elRefs[i]} key={i} item xs={12}>
+                 <PlaceDetails selected={Number(childClicked) === i} refProp={elRefs[i]} place={place} />
+             </Grid>
             ))}
           </Grid>
             
