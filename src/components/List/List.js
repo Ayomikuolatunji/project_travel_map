@@ -1,14 +1,17 @@
-import React from "react"
+import React,{createRef} from "react"
 import useStyles from './listStyle';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({places}){
-    const classes=useStyles()
-    const [type,setType]=React.useState("")
-    const [rating,setRating]=React.useState("")
-
-
+export default function List({places,childClicked}){
+    const classes=useStyles();
+    const [type,setType]=React.useState("");
+    const [rating,setRating]=React.useState("");
+    const [ref,setRef]=React.useState();   
+    React.useEffect(()=>{
+       const refs=Array.fill(places.length).map((_,i)=>ref[i] || createRef() )
+       setRef(refs)
+    },[places,ref])
     return(
         <div className={classes.container}>
             <Typography variant="h6">Food & Dining around you</Typography>
