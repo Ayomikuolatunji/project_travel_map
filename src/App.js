@@ -27,13 +27,15 @@ export default function App() {
       fetch_place_data(type,bounds.sw,bounds.ne)
       .then(data=>{
         setPlaces(Object.values(data));
+        setFilteredPlaces([])
         setloading(false)
       })
     }
   },[type,bounds])
   React.useEffect(()=>{
        const filteredArray=places.filter((place)=>place.rating>rating)
-  },[])
+       setFilteredPlaces(filteredArray)
+  },[rating,places])
   return (
         <CssBaseline>
         <Header/>
@@ -42,7 +44,7 @@ export default function App() {
         style={{width:"100%"}}>
              <Grid item xs={12} md={4}>
                  <List 
-                 places={places} 
+                 places={filteredPlaces.length ? filteredPlaces : places} 
                  childClicked={childClicked}
                  loading={loading}
                   type={type}
@@ -56,7 +58,7 @@ export default function App() {
                   setCoordinate={setCoordinate}
                   setBounds={setBounds}
                   coordinate={coordinate}
-                  places={places} 
+                  places={filteredPlaces.length ? filteredPlaces : places} 
                   setChildClicked={setChildClicked}
                  />
              </Grid>
