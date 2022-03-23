@@ -4,6 +4,8 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 import useStyles from './MapStyles.js';
+import mapStyles from './newMapStyles';
+
 
 export default function Map({coordinate,setBounds,setCoordinate,places,setChildClicked,weatherData}){
     const classes = useStyles();
@@ -12,13 +14,13 @@ export default function Map({coordinate,setBounds,setCoordinate,places,setChildC
     
     return(
         <div className={classes.mapContainer}>
-            <GoogleMapReact
+        <GoogleMapReact
               bootstrapURLKeys={{key:"AIzaSyAvTG8YHyz82spRn_az1S6Nrc_7atr5n1E"}}
               defaultCenter={coordinate}
               center={coordinate}
               defaultZoom={14}
               margin={[50,50,50,50]}
-              options={""}
+              options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
               onChange={(e)=>{
                   console.log(e)
                   setCoordinate({lat:e.center.lat,lng:e.center.lng})

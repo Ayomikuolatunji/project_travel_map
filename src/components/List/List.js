@@ -13,7 +13,7 @@ export default function List({places,childClicked,loading,rating,setRating,setTy
  
     return(
       <div className={classes.container}>
-      <Typography variant="h4">Food & Dining around you</Typography>
+      <Typography variant="h4">RESTAURANT, ATTRACTIONS & HOTELS AROUND YOU</Typography>
       {loading ? (
         <div className={classes.loading}>
           <CircularProgress size="5rem" />
