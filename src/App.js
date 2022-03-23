@@ -11,7 +11,7 @@ export default function App() {
   const [bounds,setBounds]=React.useState("");
   const [childClicked,setChildClicked]=React.useState(null);
   const [loading,setloading]=React.useState(true)
-  const [type,setType]=React.useState("attractions");
+  const [type,setType]=React.useState("hotels");
   const [rating,setRating]=React.useState("");
   const [filteredPlaces,setFilteredPlaces]=React.useState([])
 
