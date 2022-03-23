@@ -3,7 +3,7 @@ import {CssBaseline,Grid} from "@material-ui/core";
 import Header from "./components/Header/Header.js";
 import List from "./components/List/List";
 import Map from "./components/Map/Map"
-import {fetch_place_data} from "./hooks/api"
+import {fetch_place_data,getWeatherData} from "./hooks/api"
 
 export default function App() {
   const [places,setPlaces]=React.useState([])
@@ -15,6 +15,7 @@ export default function App() {
   const [rating,setRating]=React.useState("");
   const [filteredPlaces,setFilteredPlaces]=React.useState([])
   const [autocomplete, setAutocomplete] = React.useState(null);
+  const [weatherData, setWeatherData] = React.useState([]);
 
 
   React.useEffect(()=>{
@@ -25,6 +26,14 @@ export default function App() {
   React.useEffect(()=>{
     setloading(true)
     if(bounds){
+      getWeatherData(coordinate.lat,coordinate.lng)
+      .then(data=>{
+         console.log(data)
+         setWeatherData(data)
+      })
+      .catch(err=>{
+        console.log(err)
+      })
       fetch_place_data(type,bounds.sw,bounds.ne)
       .then(data=>{
         setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
@@ -72,6 +81,7 @@ export default function App() {
                   coordinate={coordinate}
                   places={filteredPlaces.length ? filteredPlaces : places} 
                   setChildClicked={setChildClicked}
+                  weatherData={weatherData}
                  />
              </Grid>
         </Grid>
