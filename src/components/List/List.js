@@ -13,8 +13,7 @@ export default function List({places,childClicked,loading}){
     
   
     React.useEffect(() => {
-      setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
-      console.log( setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef())))
+      setElRefs((refs) => Array(places?.length).fill().map((_, i) => refs[i] || createRef()));
     }, [places]);
  
     return(
@@ -23,7 +22,7 @@ export default function List({places,childClicked,loading}){
             {loading
             ?
             <div className={classes.loading}>
-              <CircularProgress/>
+              <CircularProgress size={"5rem"}/>
             </div>
             :
             <>
