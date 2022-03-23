@@ -10,6 +10,7 @@ import useStyles from './HeaderStyle';
 const Header = ({ onPlaceChanged, onLoad }) => {
   const classes = useStyles();
 
+
   return (
     <AppBar position="static">
       <Toolbar className={classes.toolbar}>

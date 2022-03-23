@@ -14,6 +14,7 @@ export default function App() {
   const [type,setType]=React.useState("hotels");
   const [rating,setRating]=React.useState("");
   const [filteredPlaces,setFilteredPlaces]=React.useState([])
+  const [autocomplete, setAutocomplete] = React.useState(null);
 
 
   React.useEffect(()=>{
@@ -26,8 +27,9 @@ export default function App() {
     if(bounds){
       fetch_place_data(type,bounds.sw,bounds.ne)
       .then(data=>{
-        setPlaces(Object.values(data));
+        setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
         setFilteredPlaces([])
+        setRating('');
         setloading(false)
       })
     }
@@ -36,9 +38,19 @@ export default function App() {
        const filteredArray=places.filter((place)=>place.rating>rating)
        setFilteredPlaces(filteredArray)
   },[rating,places])
+  const onLoad = (autoC) => setAutocomplete(autoC);
+  const onPlaceChanged = () => {
+    const lat = autocomplete.getPlace().geometry.location.lat();
+    const lng = autocomplete.getPlace().geometry.location.lng();
+
+    setCoordinate({ lat, lng });
+  };
   return (
         <CssBaseline>
-        <Header/>
+        <Header
+          onPlaceChanged={onPlaceChanged} 
+          onLoad={onLoad}
+        />
         <Grid container 
         spacing={3} 
         style={{width:"100%"}}>
