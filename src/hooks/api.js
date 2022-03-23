@@ -1,5 +1,5 @@
 import axios from "axios"
-const URL="https://travel-advisor.p.rapidapi.com/hotels/list-in-boundary"
+
 
 
 

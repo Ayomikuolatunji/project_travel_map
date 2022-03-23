@@ -11,7 +11,7 @@ export default function App() {
   const [bounds,setBounds]=React.useState("");
   const [childClicked,setChildClicked]=React.useState(null);
   const [loading,setloading]=React.useState(true)
-  const [type,setType]=React.useState("");
+  const [type,setType]=React.useState("hotels");
   const [rating,setRating]=React.useState("");
 
 
@@ -29,7 +29,7 @@ export default function App() {
         setloading(false)
       })
     }
-  },[bounds])
+  },[type,bounds])
 
   return (
         <CssBaseline>
