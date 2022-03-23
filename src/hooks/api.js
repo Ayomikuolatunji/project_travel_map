@@ -3,8 +3,8 @@ const URL="https://travel-advisor.p.rapidapi.com/hotels/list-in-boundary"
 
 
 
- export const fetch_place_data=async(sw,ne)=>{
-   const {data:{data}}=await axios.get(URL,{
+ export const fetch_place_data=async(type,sw,ne)=>{
+   const {data:{data}}=await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-in-boundary`,{
       params: {
         bl_latitude: sw.lat,
         bl_longitude: sw.lng,
