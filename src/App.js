@@ -23,7 +23,7 @@ export default function App() {
   React.useEffect(()=>{
     setloading(true)
     if(bounds){
-      fetch_place_data(bounds.sw,bounds.ne)
+      fetch_place_data(type,bounds.sw,bounds.ne)
       .then(data=>{
         setPlaces(data)
         setloading(false)
