@@ -1,4 +1,4 @@
-export default [
+ const news=[
     {
         "featureType": "administrative.locality",
         "elementType": "all",
@@ -318,3 +318,4 @@ export default [
         ]
     }
 ]
+export default news

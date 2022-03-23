@@ -28,7 +28,6 @@ export default function App() {
     if(bounds){
       getWeatherData(coordinate.lat,coordinate.lng)
       .then(data=>{
-         console.log(data)
          setWeatherData(data)
       })
       .catch(err=>{

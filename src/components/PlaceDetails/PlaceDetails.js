@@ -35,8 +35,8 @@ export default function PlaceDetail({place,selected,refProp}){
                     {place.ranking}
                   </Typography>
                 </Box>
-                {place?.awards?.map((award) => (
-                  <Box display="flex" justifyContent="space-between" my={1} alignItems="center">
+                {place?.awards?.map((award,i) => (
+                  <Box display="flex" justifyContent="space-between" my={1} alignItems="center" key={i}>
                     <img src={award.images.small} alt="img-pic"/>
                     <Typography variant="subtitle2" color="textSecondary">{award.display_name}</Typography>
                   </Box>
