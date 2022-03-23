@@ -18,3 +18,15 @@ import axios from "axios"
    })
    return data
  }
+
+
+ export const getWeatherData=async()=>{
+     try{
+        const {data}=await axios.get("https://community-open-weather-map.p.rapidapi.com/find",{
+          params: {lon: '0',type: 'link, accurate',lat: '0',
+          },
+        })
+     }catch(err){
+
+     }
+ }
