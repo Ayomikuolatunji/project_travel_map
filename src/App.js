@@ -13,6 +13,7 @@ export default function App() {
   const [loading,setloading]=React.useState(true)
   const [type,setType]=React.useState("attractions");
   const [rating,setRating]=React.useState("");
+  const [filteredPlaces,setFilteredPlaces]=React.useState([])
 
 
   React.useEffect(()=>{
@@ -30,7 +31,9 @@ export default function App() {
       })
     }
   },[type,bounds])
-   console.log(type)
+  React.useEffect(()=>{
+       const filteredArray=places.filter((place)=>place.rating>rating)
+  },[])
   return (
         <CssBaseline>
         <Header/>
