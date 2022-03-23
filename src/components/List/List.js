@@ -3,10 +3,8 @@ import useStyles from './listStyle';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({places,childClicked,loading}){
+export default function List({places,childClicked,loading,rating,setRating,setType},type){
     const classes=useStyles();
-    const [type,setType]=React.useState("");
-    const [rating,setRating]=React.useState("");
     const [elRefs, setElRefs] = React.useState([]);
       
      
@@ -50,7 +48,6 @@ export default function List({places,childClicked,loading}){
              </Grid>
             ))}
           </Grid>
-            
             </>
            }
            
