@@ -11,7 +11,7 @@ export default function App() {
   const [bounds,setBounds]=React.useState("");
   const [childClicked,setChildClicked]=React.useState(null);
   const [loading,setloading]=React.useState(true)
-  const [type,setType]=React.useState("hotels");
+  const [type,setType]=React.useState("attractions");
   const [rating,setRating]=React.useState("");
 
 
@@ -25,12 +25,12 @@ export default function App() {
     if(bounds){
       fetch_place_data(type,bounds.sw,bounds.ne)
       .then(data=>{
-        setPlaces(data)
+        setPlaces(Object.values(data));
         setloading(false)
       })
     }
   },[type,bounds])
-
+   console.log(type)
   return (
         <CssBaseline>
         <Header/>
@@ -40,12 +40,13 @@ export default function App() {
              <Grid item xs={12} md={4}>
                  <List 
                  places={places} 
-                 childClicked={childClicked}/>
+                 childClicked={childClicked}
                  loading={loading}
-                 rating={rating}
-                 setRating={setRating}
-                 type={type}
-                 setType={setType}
+                  type={type}
+                  setType={setType}
+                  rating={rating}
+                  setRating={setRating}
+                  />
              </Grid>
              <Grid item xs={12} md={8}>
                 <Map
