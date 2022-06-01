@@ -15,7 +15,6 @@ const Address = () => {
     googleMapsApiKey: "AIzaSyAvTG8YHyz82spRn_az1S6Nrc_7atr5n1E"
   })
 
-  const [map, setMap] = React.useState(null)
   const [address, setAddress] = React.useState('')
 
 
@@ -51,18 +50,19 @@ const Address = () => {
 
 
     const onUnmount = React.useCallback(function callback(map) {
-      setMap(null)
     }, [])
    
 
   return (
     <div className='w-[90%] mx-auto'>
-      <form id="form" onSubmit={searchFunction}>
-        <input type="text" id="address" name="address" className="p-2" placeholder="type your valid address here.."
-         onChange={(e)=>setAddress(e.target.value)}
-        />
-        <button type="submit" className="btn btn-primary">SEARCH ADDRESS</button>
-      </form>
+      <div className="header">
+        <form id="form" onSubmit={searchFunction}>
+          <input type="text" id="address" name="address" className="p-2" placeholder="type your valid address here.."
+          onChange={(e)=>setAddress(e.target.value)}
+          />
+          <button type="submit" className="btn btn-primary">SEARCH ADDRESS</button>
+        </form>
+      </div>
       {
         isLoaded ? (
           <GoogleMap
