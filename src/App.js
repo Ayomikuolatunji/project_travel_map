@@ -54,36 +54,39 @@ export default function App() {
     setCoordinate({ lat, lng });
   };
   return (
-        <CssBaseline>
-        <Header
-          onPlaceChanged={onPlaceChanged} 
-          onLoad={onLoad}
-        />
-        <Grid container 
-        spacing={3} 
-        style={{width:"100%"}}>
-             <Grid item xs={12} md={4}>
-                 <List 
-                 places={filteredPlaces.length ? filteredPlaces : places} 
-                 childClicked={childClicked}
-                 loading={loading}
-                  type={type}
-                  setType={setType}
-                  rating={rating}
-                  setRating={setRating}
-                  />
-             </Grid>
-             <Grid item xs={12} md={8}>
-                <Map
-                  setCoordinate={setCoordinate}
-                  setBounds={setBounds}
-                  coordinate={coordinate}
-                  places={filteredPlaces.length ? filteredPlaces : places} 
-                  setChildClicked={setChildClicked}
-                  weatherData={weatherData}
-                 />
-             </Grid>
-        </Grid>
-        </CssBaseline>
+       <div className='block'>
+          <CssBaseline>
+            <Header
+              onPlaceChanged={onPlaceChanged} 
+              onLoad={onLoad}
+            />
+            <div className='flex flex-wrap w-[90%] mx-auto h-[60vh]'>
+                <div className='w-[30%]'>
+                    <List 
+                    places={filteredPlaces.length ? filteredPlaces : places} 
+                    childClicked={childClicked}
+                    loading={loading}
+                      type={type}
+                      setType={setType}
+                      rating={rating}
+                      setRating={setRating}
+                      />
+                </div>
+                <div className='w-[70%] sticky'>
+                    <Map
+                      setCoordinate={setCoordinate}
+                      setBounds={setBounds}
+                      coordinate={coordinate}
+                      places={filteredPlaces.length ? filteredPlaces : places} 
+                      setChildClicked={setChildClicked}
+                      weatherData={weatherData}
+                    />
+                </div>
+            </div>
+            </CssBaseline>
+            <div>
+                Looking for a place?
+            </div>
+       </div>
   )
 }
