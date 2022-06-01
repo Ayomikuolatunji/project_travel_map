@@ -5,7 +5,7 @@ import AttractionHotelsRes from './pages/AttractionHotelsRes'
 const App = () => {
   return (
     <div>
-      <AttractionHotelsRes/>
+      {/* <AttractionHotelsRes/> */}
       <Address/>
     </div>
   )
