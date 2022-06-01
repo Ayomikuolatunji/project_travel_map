@@ -1,20 +1,21 @@
-import React,{createRef} from "react"
-import useStyles from './listStyle';
+import React, { useState, useEffect, createRef } from 'react';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
-import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({places,childClicked,loading,rating,setRating,setType,type}){
-  const [elRefs, setElRefs] = React.useState([]);
+import PlaceDetails from '../PlaceDetails/PlaceDetails';
+import useStyles from './listStyle';
+
+const List = ({ places, type, setType, rating, setRating, childClicked, isLoading }) => {
+  const [elRefs, setElRefs] = useState([]);
   const classes = useStyles();
 
-  React.useEffect(() => {
+  useEffect(() => {
     setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
   }, [places]);
- 
-    return(
-      <div className={classes.container}>
-      <Typography variant="h4">RESTAURANT, ATTRACTIONS & HOTELS AROUND YOU</Typography>
-      {loading ? (
+
+  return (
+    <div className={classes.container}>
+      <Typography variant="h4">Food & Dining around you</Typography>
+      {isLoading ? (
         <div className={classes.loading}>
           <CircularProgress size="5rem" />
         </div>
@@ -47,5 +48,7 @@ export default function List({places,childClicked,loading,rating,setRating,setTy
         </>
       )}
     </div>
-    )
-}
+  );
+};
+
+export default List;

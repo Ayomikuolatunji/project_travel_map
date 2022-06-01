@@ -1,88 +1,94 @@
-import React from 'react'
-import Header from "../components/Header/Header";
-import List from "../components/List/List";
-import Map from "../components/Map/Map"
-import {fetch_place_data,getWeatherData} from "../hooks/api"
+import React, { useState, useEffect } from 'react';
+import { CssBaseline, Grid } from '@material-ui/core';
 
-export default function AttractionHotelsRes() {
-  const [places,setPlaces]=React.useState([])
-  const [coordinate,setCoordinate]=React.useState({})
-  const [bounds,setBounds]=React.useState("");
-  const [childClicked,setChildClicked]=React.useState(null);
-  const [loading,setloading]=React.useState(true)
-  const [type,setType]=React.useState("hotels");
-  const [rating,setRating]=React.useState("");
-  const [filteredPlaces,setFilteredPlaces]=React.useState([])
-  const [autocomplete, setAutocomplete] = React.useState(null);
-  const [weatherData, setWeatherData] = React.useState([]);
+import { getPlacesData, getWeatherData } from '../hooks/api';
+import Header from '../components/Header/Header';
+import List from '../components/List/List';
+import Map from '../components/Map/Map';
 
+const AttractionHotelsRes = () => {
+  const [type, setType] = useState('restaurants');
+  const [rating, setRating] = useState('');
 
-  React.useEffect(()=>{
-    navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
-      setCoordinate({lat:latitude, lng:longitude})
-    })
-  },[])
-  React.useEffect(()=>{
-    setloading(true)
-    if(bounds){
-      getWeatherData(coordinate.lat,coordinate.lng)
-      .then(data=>{
-         setWeatherData(data)
-      })
-      .catch(err=>{
-        console.log(err)
-      })
-      fetch_place_data(type,bounds.sw,bounds.ne)
-      .then(data=>{
-        setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
-        setFilteredPlaces([])
-        setRating('');
-        setloading(false)
-      })
+  const [coords, setCoords] = useState({});
+  const [bounds, setBounds] = useState(null);
+
+  const [weatherData, setWeatherData] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
+  const [places, setPlaces] = useState([]);
+
+  const [autocomplete, setAutocomplete] = useState(null);
+  const [childClicked, setChildClicked] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoords({ lat: latitude, lng: longitude });
+    });
+  }, []);
+
+  useEffect(() => {
+    const filtered = places.filter((place) => Number(place.rating) > rating);
+
+    setFilteredPlaces(filtered);
+  }, [rating, places]);
+
+  useEffect(() => {
+    if (bounds) {
+      setIsLoading(true);
+
+      getWeatherData(coords.lat, coords.lng)
+        .then((data) => setWeatherData(data));
+
+      getPlacesData(type, bounds.sw, bounds.ne)
+        .then((data) => {
+          setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
+          setFilteredPlaces([]);
+          setRating('');
+          setIsLoading(false);
+        });
     }
-  },[type,bounds,coordinate])
+  }, [bounds, type, coords]);
 
-  
-  React.useEffect(()=>{
-       const filteredArray=places.filter((place)=>place.rating>rating)
-       setFilteredPlaces(filteredArray)
-  },[rating,places])
   const onLoad = (autoC) => setAutocomplete(autoC);
+
   const onPlaceChanged = () => {
     const lat = autocomplete.getPlace().geometry.location.lat();
     const lng = autocomplete.getPlace().geometry.location.lng();
 
-    setCoordinate({ lat, lng });
+    setCoords({ lat, lng });
   };
+
   return (
-       <div className='flex flex-col h-[50vh]'>
-            <Header
-              onPlaceChanged={onPlaceChanged} 
-              onLoad={onLoad}
-            />
-            <div className='flex flex-wrap w-[95%] mx-auto'>
-                <div className='sm:w-[30%] w-[95%]'>
-                    <List 
-                    places={filteredPlaces.length ? filteredPlaces : places} 
-                    childClicked={childClicked}
-                    loading={loading}
-                      type={type}
-                      setType={setType}
-                      rating={rating}
-                      setRating={setRating}
-                      />
-                </div>
-                <div className='sm:w-[70%] w-[95%] sticky'>
-                    <Map
-                      setCoordinate={setCoordinate}
-                      setBounds={setBounds}
-                      coordinate={coordinate}
-                      places={filteredPlaces.length ? filteredPlaces : places} 
-                      setChildClicked={setChildClicked}
-                      weatherData={weatherData}
-                    />
-                </div>
-            </div>
-       </div>
-  )
-}
+    <>
+      <CssBaseline />
+      <Header onPlaceChanged={onPlaceChanged} onLoad={onLoad} />
+      <Grid container spacing={3} md={11} style={{margin:"auto"}} xs={12}>
+        <Grid item xs={12} md={4}>
+          <List
+            isLoading={isLoading}
+            childClicked={childClicked}
+            places={filteredPlaces.length ? filteredPlaces : places}
+            type={type}
+            setType={setType}
+            rating={rating}
+            setRating={setRating}
+          />
+        </Grid>
+        <Grid item xs={12} md={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Map
+            setChildClicked={setChildClicked}
+            setBounds={setBounds}
+            setCoords={setCoords}
+            coords={coords}
+            places={filteredPlaces.length ? filteredPlaces : places}
+            weatherData={weatherData}
+          />
+        </Grid>
+      </Grid>
+      <div></div>
+    </>
+  );
+};
+
+export default AttractionHotelsRes

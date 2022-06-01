@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Chip } from '@material-ui/core';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@material-ui/icons/Phone';
+import PhoneIcon from '@mui/icons-material/Phone';
 import Rating from '@mui/material/Rating';
 import useStyles from './detailStyle';
 

@@ -1,14 +1,12 @@
 import React from 'react'
-import AttractionHotelsRes from './pages/AttractionHotelsRes.js';
+import AttractionHotelsRes from './pages/AttractionHotelsRes'
 
-export default function App() {
-
+const App = () => {
   return (
-       <div className='flex flex-col'>
-           <AttractionHotelsRes/>
-           <div>
-             lorem1000
-           </div>
-       </div>
+    <div>
+      <AttractionHotelsRes/>
+    </div>
   )
 }
+
+export default App
