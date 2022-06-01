@@ -20,7 +20,7 @@ const Address = () => {
 
 
   const containerStyle = {
-    width: '800px',
+    width: '100%',
     height: '400px'
   };
   
@@ -56,7 +56,7 @@ const Address = () => {
    
 
   return (
-    <div>
+    <div className='w-[90%] mx-auto'>
       <form id="form" onSubmit={searchFunction}>
         <input type="text" id="address" name="address" className="p-2" placeholder="type your valid address here.."
          onChange={(e)=>setAddress(e.target.value)}
@@ -71,10 +71,7 @@ const Address = () => {
             zoom={10}
             onLoad={onLoad}
             onUnmount={onUnmount}
-          >
-            { /* Child components, such as markers, info windows, etc. */ }
-            <></>
-          </GoogleMap>
+          />
       ) : <></>
       }
     </div>
