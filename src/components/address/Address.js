@@ -29,12 +29,10 @@ const Address = () => {
         lng: lng
       }
   },[lat,lng])
-   console.log(data);
   const searchFunction=async(event)=>{
     event.preventDefault()
     try {
         const response= await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(address)}&key=${GOOGLE_API_KEY}`)
-        console.log(response)
          setLat(response.data.results[0].geometry.location.lat)
          setLng(response.data.results[0].geometry.location.lng)
          if(response){
