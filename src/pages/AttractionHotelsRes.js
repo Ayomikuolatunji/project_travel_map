@@ -86,7 +86,6 @@ const AttractionHotelsRes = () => {
           />
         </Grid>
       </Grid>
-      <div></div>
     </>
   );
 };
