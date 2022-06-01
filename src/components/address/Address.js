@@ -58,10 +58,10 @@ const Address = () => {
     <div className='w-[90%] mx-auto my-6'>
       <div className="header-form flex justify-between my-7">
         <h1 className='text-black text-3xl'>Are you looking for a place anywhere around the world?</h1>
-        <form id="form" onSubmit={searchFunction}>
+        <form id="form" onSubmit={searchFunction} className="w-[100%] flex justify-end">
           <input 
           type="text" id="address" name="address" 
-          className="p-2" placeholder="type your valid address here.."
+          className="p-2 w-[70%] border-2 rounded-3xl" placeholder="Type your valid location address here.."
           onChange={(e)=>setAddress(e.target.value)}
           />
         </form>
