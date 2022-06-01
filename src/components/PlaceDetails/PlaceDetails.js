@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Chip } from '@material-ui/core';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Rating from '@mui/material/Rating';
 import useStyles from './detailStyle';
@@ -13,7 +13,7 @@ export default function PlaceDetail({place,selected,refProp}){
     return(
         <Card elevation={6}>
            <CardMedia
-                style={{ height: 250 }}
+                style={{ height: 270 }}
                 image={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}
                 title={place.name}
             />
@@ -29,12 +29,14 @@ export default function PlaceDetail({place,selected,refProp}){
                         {place.price_level}
                     </Typography>
                 </Box>
-                <Box display="flex" justifyContent="space-between">
-                  <Typography component="legend">Ranking</Typography>
-                  <Typography gutterBottom variant="subtitle1">
-                    {place.ranking}
-                  </Typography>
-                </Box>
+                <br />
+                <div className="w-full flex justify-between">
+                  <h2 component="legend">Ranking</h2>
+                  <br />
+                  <span className="text-[15px]">
+                      <span>{place.ranking}</span>
+                  </span>
+                </div>
                 {place?.awards?.map((award,i) => (
                   <Box display="flex" justifyContent="space-between" my={1} alignItems="center" key={i}>
                     <img src={award.images.small} alt="img-pic"/>
