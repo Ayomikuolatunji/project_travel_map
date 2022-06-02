@@ -63,8 +63,8 @@ const AttractionHotelsRes = () => {
     <>
       <CssBaseline />
       <Header onPlaceChanged={onPlaceChanged} onLoad={onLoad} />
-      <Grid container spacing={3}  className='sm:w-[80%] w-[100%]' style={{margin:"auto",width:"95%"}} >
-        <div className='md:w-[30%] w-[100%] mx-auto'>
+      <Grid container spacing={3} style={{ width: '95%', margin:"auto" }}>
+        <Grid item xs={12} md={4}>
           <List
             isLoading={isLoading}
             childClicked={childClicked}
@@ -74,8 +74,8 @@ const AttractionHotelsRes = () => {
             rating={rating}
             setRating={setRating}
           />
-        </div>
-        <div className='md:w-[70%] w-[100%]  mx-uto sm:my-0 mt-6' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        </Grid>
+        <Grid item xs={12} md={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Map
             setChildClicked={setChildClicked}
             setBounds={setBounds}
@@ -84,7 +84,7 @@ const AttractionHotelsRes = () => {
             places={filteredPlaces.length ? filteredPlaces : places}
             weatherData={weatherData}
           />
-        </div>
+        </Grid>
       </Grid>
     </>
   );
