@@ -5,6 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import logo from "../../assets/images/destination.png"
 
 import useStyles from './HeaderStyle';
+import CurrentLocation from '../user-location/CurrentLocation';
 
 const Header = ({ onPlaceChanged, onLoad }) => {
   const classes = useStyles();
@@ -22,6 +23,10 @@ const Header = ({ onPlaceChanged, onLoad }) => {
             Explore new places
           </h6>
         </Box> 
+        {/* current Loaction */}
+        <Box className='flex flex-col sm:flex-row'>
+          <CurrentLocation/>
+        </Box>
         <Box display="flex">
           <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
             <div className={classes.search}>
