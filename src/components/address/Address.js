@@ -72,7 +72,7 @@ const Address = () => {
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={6}
+            zoom={20}
             onLoad={onLoad}
             onUnmount={onUnmount}
           >

@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiFillYoutube,AiFillFacebook,AiFillLinkedin,AiFillInstagram,AiFillTwitterSquare} from "react-icons/ai"
+import {AiFillYoutube,AiFillGithub,AiFillLinkedin,AiFillInstagram,AiFillTwitterSquare} from "react-icons/ai"
 import logo from "../../assets/images/destination.png"
 
 
@@ -56,11 +56,16 @@ const Footer = () => {
                 </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <div className="social-icons flex my-5 mr-4">
-                    <AiFillYoutube className='text-4xl ml-3'/>
-                    <AiFillFacebook className="text-4xl ml-3"/>
+                    <a href="https://github.com/Ayomikuolatunji/project_travel_map">
+                    <AiFillGithub className="text-4xl ml-3"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayomiku-olatunji-891901198/">
                     <AiFillLinkedin className='text-4xl ml-3'/>
+                    </a>
                     <AiFillInstagram className='text-4xl ml-3'/>
+                    <a href="https://twitter.com/ayomiku222">
                     <AiFillTwitterSquare className='text-4xl ml-3'/>
+                    </a>
                 </div>
             </div>
         </div>
