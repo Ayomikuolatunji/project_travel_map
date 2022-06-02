@@ -26,7 +26,7 @@ import axios from "axios"
           params: {lon: lng,lat:lat},
           headers: {
             'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com',
-            'X-RapidAPI-Key': 'f39faec486msh7879808fc1c5c89p167805jsn011d92b6ee37'
+            'X-RapidAPI-Key': 'cdf111e78bmsh3a3833806dff059p1775c1jsndf1581c43594'
           }
         })
         return data
