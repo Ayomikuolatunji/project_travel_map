@@ -13,7 +13,7 @@ import axios from "axios"
       },
       headers: {
         'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
-        'x-rapidapi-key': 'cdf111e78bmsh3a3833806dff059p1775c1jsndf1581c43594'
+        'x-rapidapi-key': '8725ca9e95msh6084481b7217b93p198634jsnd30e746fe2b1'
       }
    })
    return data
