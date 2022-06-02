@@ -10,7 +10,7 @@ const App = () => {
     useEffect(()=>{
         setTimeout(()=>{
             setCondition(true)
-        },10000)
+        },8000)
     },[])
 
 
