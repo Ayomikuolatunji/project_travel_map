@@ -27,13 +27,16 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow Me</h2>
                     <ul className="text-gray-600 dark:text-gray-400">
                         <li className="mb-4">
-                        <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Linkedin</a>
+                        <a href="https://www.linkedin.com/in/ayomiku-olatunji-891901198/" 
+                        className="hover:underline " 
+                        target="_blank" rel="noreferrer"
+                        >Linkedin</a>
                         </li>
                         <li>
-                        <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                        <a href="https://twitter.com/ayomiku222" className="hover:underline">Twitter</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +59,7 @@ const Footer = () => {
                 </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <div className="social-icons flex my-5 mr-4">
-                    <a href="https://github.com/Ayomikuolatunji/project_travel_map">
+                    <a href="https://github.com/Ayomikuolatunji/">
                     <AiFillGithub className="text-4xl ml-3"/>
                     </a>
                     <a href="https://www.linkedin.com/in/ayomiku-olatunji-891901198/">
