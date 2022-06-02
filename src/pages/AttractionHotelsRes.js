@@ -75,7 +75,7 @@ const AttractionHotelsRes = () => {
             setRating={setRating}
           />
         </div>
-        <div className='md:w-[70%] w-[100%] sm:mx-3 mx-uto sm:my-0 mt-6' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className='md:w-[70%] w-[100%]  mx-uto sm:my-0 mt-6' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Map
             setChildClicked={setChildClicked}
             setBounds={setBounds}
