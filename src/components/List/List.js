@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { CircularProgress,Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
+import { CircularProgress,Typography, InputLabel,  Select } from '@material-ui/core';
 
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 import useStyles from './listStyle';
@@ -21,24 +21,24 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
         </div>
       ) : (
         <>
-          <div className=''>
-           <div className={classes.formControl}>
+          <div className='mt-7'>
+           <div className={'max-w-full w-full mb-[30px]'}>
             <InputLabel id="type">Type</InputLabel>
-            <Select id="type" value={type} onChange={(e) => setType(e.target.value)}>
-              <MenuItem value="restaurants">Restaurants</MenuItem>
-              <MenuItem value="hotels">Hotels</MenuItem>
-              <MenuItem value="attractions">Attractions</MenuItem>
+            <Select id="type" value={type} onChange={(e) => setType(e.target.value)} className="w-full">
+              <option value="restaurants">Restaurants</option>
+              <option value="hotels">Hotels</option>
+              <option value="attractions">Attractions</option>
             </Select>
           </div>
-          <FormControl className={classes.formControl}>
+          <div className={'max-w-full w-full mb-[30px]'}>
             <InputLabel id="rating">Rating</InputLabel>
-            <Select id="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
-              <MenuItem value="">All</MenuItem>
-              <MenuItem value="3">Above 3.0</MenuItem>
-              <MenuItem value="4">Above 4.0</MenuItem>
-              <MenuItem value="4.5">Above 4.5</MenuItem>
+            <Select id="rating" value={rating} onChange={(e) => setRating(e.target.value)} className='w-full'>
+              <option value="">All</option>
+              <option value="3">Above 3.0</option>
+              <option value="4">Above 4.0</option>
+              <option value="4.5">Above 4.5</option>
             </Select>
-          </FormControl>
+          </div>
            </div>
           <div className='h-[75vh] overflow-auto'>
             {places?.map((place, i) => (
