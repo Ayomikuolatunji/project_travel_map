@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
              <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
         <div className="flex items-center sm:justify-between justify-center flex-col-reverse sm:flex-row">
-                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" className="hover:underline">Ayoscript</a>. All Rights Reserved.
+                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {new Date().getFullYear()} <a href="https://flowbite.com" className="hover:underline">Ayoscript</a>. All Rights Reserved.
                 </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <div className="social-icons flex my-5 mr-4">
