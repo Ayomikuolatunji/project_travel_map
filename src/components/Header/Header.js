@@ -12,14 +12,16 @@ const Header = ({ onPlaceChanged, onLoad }) => {
 
   return (
     <AppBar position="static">
-      <Toolbar className='w-full flex justify-between'>
-          <span className="flex items-center">
+      <Toolbar className='w-full flex sm:justify-between sm:flex-row flex-col sm:py-0 py-2 justify-center items-center'>
+        <Box>
+        <span className="flex items-center">
                <img src={logo} className="mr-3 h-8" alt="FlowBite Logo"/>
-                 <span className="self-center text-2xl font-semibold   whitespace-nowrap dark:text-white">Travel Advisor</span>
+                 <span className="self-center sm:text-2xl font-semibold text-sm  whitespace-nowrap dark:text-white">Travel Advisor</span>
             </span>
-          <h6 className='sm:block hidden'>
+          <h6 className='sm:block sm:relative'>
             Explore new places
           </h6>
+        </Box> 
         <Box display="flex">
           <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
             <div className={classes.search}>
