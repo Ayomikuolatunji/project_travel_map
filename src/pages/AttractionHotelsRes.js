@@ -63,8 +63,8 @@ const AttractionHotelsRes = () => {
     <>
       <CssBaseline />
       <Header onPlaceChanged={onPlaceChanged} onLoad={onLoad} />
-      <Grid container spacing={3} md={11} style={{margin:"auto"}} xs={12}>
-        <div className='md:w-[30%] w-[95%] mx-auto'>
+      <Grid container spacing={3}  className='sm:w-[80%] w-[100%]' style={{margin:"auto",width:"95%"}} >
+        <div className='md:w-[30%] w-[100%] mx-auto'>
           <List
             isLoading={isLoading}
             childClicked={childClicked}
@@ -75,7 +75,7 @@ const AttractionHotelsRes = () => {
             setRating={setRating}
           />
         </div>
-        <div className='md:w-[70%] w-full' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className='md:w-[70%] w-[100%] mx-auto' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Map
             setChildClicked={setChildClicked}
             setBounds={setBounds}

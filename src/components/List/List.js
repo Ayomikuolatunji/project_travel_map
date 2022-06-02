@@ -42,7 +42,7 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
            </div>
           <div className='h-[75vh] overflow-auto'>
             {places?.map((place, i) => (
-              <div ref={elRefs[i]} key={i} className='w-full my-4'>
+              <div ref={elRefs} key={i} className='w-full my-4'>
                 <PlaceDetails selected={Number(childClicked) === i} refProp={elRefs[i]} place={place} />
               </div>
             ))}
