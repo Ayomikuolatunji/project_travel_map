@@ -18,7 +18,7 @@ const Header = ({ onPlaceChanged, onLoad }) => {
        <Box>
         <span className="flex items-center">
                <img src={logo} className="mr-3 h-8" alt="FlowBite Logo"/>
-                 <span className="self-center sm:text-2xl font-semibold text-sm  whitespace-nowrap dark:text-white">Travel Advisor</span>
+                 <span className="self-center sm:text-2xl font-semibold text-sm  whitespace-nowrap dark:text-white">Travel Guide</span>
             </span>
           <h6 className='sm:block sm:relative'>
             Explore new places
