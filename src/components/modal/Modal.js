@@ -33,7 +33,7 @@ export default function KeepMountedModal(condition) {
             Map tips
           </Typography>
           <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-             Zoom out the map if the list was shown to .
+             Zoom out the map if the currents places  are not visible.
           </Typography>
         </Box>
       </Modal>
