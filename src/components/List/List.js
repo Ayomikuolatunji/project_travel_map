@@ -13,7 +13,7 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
   }, [places]);
 
   return (
-    <div className={classes.container}>
+    <div className="w-full max-w-full padding-[25px] mt-[40px]">
       <Typography variant="h4">Hotels, Attractions & Dining around you</Typography>
       {isLoading ? (
         <div className={classes.loading}>
